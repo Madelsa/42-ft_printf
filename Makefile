@@ -6,26 +6,27 @@
 #    By: mabdelsa <mabdelsa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/05 12:01:23 by mabdelsa          #+#    #+#              #
-#    Updated: 2023/08/07 14:45:57 by mabdelsa         ###   ########.fr        #
+#    Updated: 2023/09/09 14:56:44 by mabdelsa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = ft_printf.c print_char_string.c print_decimal.c print_hexa.c
 
-
-OBJS	= $(SRC:.c=.o)
-
 NAME	= libftprintf.a
-AR		= ar rcs
+AR		= ar rs
 RM		= rm -f
 GCC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
+OBJS	= $(SRC:.c=.o)
+
 all: $(NAME)
+
+$(OBJS): %.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
-
 clean:
 	$(RM) $(OBJS)
 
