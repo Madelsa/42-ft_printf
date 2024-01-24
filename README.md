@@ -7,10 +7,8 @@ This is the implementation of the `printf` function in C, named `ft_printf`, as 
 - [Description](#description)
 - [Usage](#usage)
 - [Functionality](#functionality)
+- [Example](#example) 
 - [How to Compile](#how-to-compile)
-- [Examples](#examples)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 
@@ -23,7 +21,7 @@ To use the `ft_printf` function in your project, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/ft_printf.git
+    https://github.com/Madelsa/42-ft_printf.git
     ```
 
 2. Include the header file in your source code:
@@ -51,24 +49,40 @@ The `ft_printf` function supports the following format specifiers:
 - `%u`: Unsigned Integer
 - `%x`: Hexadecimal (lowercase)
 - `%X`: Hexadecimal (uppercase)
-- `%o`: Octal
-- `%f`: Floating-point
 - `%%`: Percent sign
-
-### Additional Format Specifiers
-
-- `%e`: Scientific notation (lowercase)
-- `%E`: Scientific notation (uppercase)
-- `%g`: Shortest representation of `%e` or `%f`
-- `%G`: Shortest representation of `%E` or `%f`
-- `%a`: Hexadecimal floating-point (lowercase)
-- `%A`: Hexadecimal floating-point (uppercase)
 
 For detailed usage and additional options, refer to the [man page](#) (Replace `#` with the actual link once it's available).
 
+## Example
+
+Here is an example demonstrating the usage of `ft_printf`:
+
+```c
+#include "ft_printf.h"
+
+int main(void)
+{
+    ft_printf("Hello, %s! This is a number: %d\n", "User", 42);
+    return 0;
+}
+```
+
 ## How to Compile
 
-To compile the `ft_printf` project, run the following commands:
+To compile the `ft_printf` project, run the following command:
 
 ```bash
 make
+```
+
+After that, compile the `.c` file that contains the `main` function:
+
+```bash
+gcc my_program.c libftprintf.a
+```
+
+Finally, run your `a.out` executable:
+
+```bash
+./a.out
+```
