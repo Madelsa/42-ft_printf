@@ -5,38 +5,13 @@ This is the implementation of the `printf` function in C, named `ft_printf`, as 
 ## Table of Contents
 
 - [Description](#description)
-- [Usage](#usage)
 - [Functionality](#functionality)
 - [Example](#example) 
-- [How to Compile](#how-to-compile)
+- [Usage](#usage)
 
 ## Description
 
 The `ft_printf` project is an implementation of the standard C library function `printf`. It supports various format specifiers and provides a way to format and print data.
-
-## Usage
-
-To use the `ft_printf` function in your project, follow these steps:
-
-1. Clone the repository:
-
-    ```bash
-    https://github.com/Madelsa/42-ft_printf.git
-    ```
-
-2. Include the header file in your source code:
-
-    ```c
-    #include "ft_printf.h"
-    ```
-
-3. Compile your code with the `ft_printf` source files:
-
-    ```bash
-    gcc -Wall -Wextra -Werror -I path/to/ft_printf main.c path/to/ft_printf/*.c -o your_executable
-    ```
-
-4. Use `ft_printf` in your code as you would use the standard `printf` function.
 
 ## Functionality
 
@@ -50,8 +25,6 @@ The `ft_printf` function supports the following format specifiers:
 - `%x`: Hexadecimal (lowercase)
 - `%X`: Hexadecimal (uppercase)
 - `%%`: Percent sign
-
-For detailed usage and additional options, refer to the [man page](#) (Replace `#` with the actual link once it's available).
 
 ## Example
 
@@ -67,22 +40,37 @@ int main(void)
 }
 ```
 
-## How to Compile
+## Usage
 
-To compile the `ft_printf` project, run the following command:
+To use the `ft_printf` function in your project, follow these steps:
 
-```bash
-make
-```
+1. Clone the repository:
 
-After that, compile the `.c` file that contains the `main` function:
+    ```bash
+    https://github.com/Madelsa/42-ft_printf.git
+    ```
 
-```bash
-gcc my_program.c libftprintf.a
-```
+2. Include the header file in your `.c` file:
 
-Finally, run your `a.out` executable:
+    ```c
+    #include "ft_printf.h"
+    ```
 
-```bash
-./a.out
-```
+3. Compile the `ft_printf` project by running the following command:
+
+    ```bash
+    make
+    ```
+   
+4. Compile your `.c` file that contains the `main` function:
+
+    ```bash
+    gcc my_program.c libftprintf.a
+    ```
+
+5. Run your `a.out` executable:
+   
+   ```bash
+   ./a.out
+   ```
+6. Now you can use `ft_printf` in your code as you would use the standard `printf` function.
